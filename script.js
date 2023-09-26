@@ -8,7 +8,7 @@ document.addEventListener("mousemove", function (dets) {
   blur.style.top = dets.y - 250 + "px";
 });
 
-var h4all = document.querySelectorAll("#nav h4");
+var h4all = document.querySelectorAll("#nav h4 , #page4 h2");
 h4all.forEach(function (elem) {
   elem.addEventListener("mouseenter", function () {
     crsr.style.scale = 3;
@@ -47,7 +47,7 @@ gsap.to("#main", {
 });
 
 gsap.from("#about-us img, #about-us-in", {
-  y: 50,
+  y: 90,
   opacity: 0,
   duration: 1,
   // stagger:0.4,
@@ -56,23 +56,58 @@ gsap.from("#about-us img, #about-us-in", {
     scroll: "body",
     // markers: true,
     start: "top 70%",
-    end: "top 60%",
+    end: "top 65%",
     scrub: 1,
   },
 });
 
 
 gsap.to(".card", {
-    scale:0.9,
-    opacity: 0,
+    scale:0.8,
+    // opacity: 0,
     duration: 1,
-    // stagger:0.4,
+    stagger:0.1,
     scrollTrigger: {
       trigger: ".card",
       scroll: "body",
-    //   markers: true,
+    //   markers: true,s
       start: "top 70%",
       end: "top 65%",
       scrub: 2,
+    },
+  });
+
+  gsap.from("#col1",{
+    y:-70,
+    x:-70,
+    scrollTrigger:{
+      trigger:"#col1",
+      scroller:"body",
+      start:"top 50%",
+      end:"top 45%",
+      scrub:4,
+    },
+  });
+
+  gsap.from("#col2",{
+    y:70,
+    x:70,
+    scrollTrigger:{
+      trigger:"#col1",
+      scroller:"body",
+      start:"top 50%",
+      end:"top 45%",
+      scrub:4,
+    },
+  });
+
+  gsap.from("#page4 h1", {
+    y:50,
+    scrollTrigger:{
+      trigger:"#page4 h1",
+      scroller:"body",
+      start:"top 55%",
+      end:"top 70%",
+      scrub:3,
     },
   });

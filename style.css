@@ -5,6 +5,21 @@
   font-family: "montserrat";
   color: #fff;
 }
+*::selection{
+  background-color: #fff;
+  color: #95c11e;
+}
+
+body::-webkit-scrollbar{
+  display: block;
+  width: 5px;
+  background-color: #95c11e;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: #fff;
+  border-radius: 50%;
+}
 
 html,
 body {
@@ -104,6 +119,34 @@ video {
   width: 40%;
 }
 
+
+#page1 #arrow{
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  left: -2%;
+  bottom: 0%;
+  background-color: transparent;
+  border: 2px solid  #95c11e;
+  transition: all ease 0.5s;
+}
+
+#page1 #arrow i{
+  font-size: 50px;
+  font-weight: 100;
+
+}
+
+#page1 #arrow:hover{
+  scale: 0.4;
+  background-color:#95c11e ;
+}
+
+
 #page2 {
   min-height: 100vh;
   width: 100%;
@@ -121,7 +164,7 @@ video {
 #scroller::-webkit-scrollbar {
   display: none;
 }
-#scroller-in {
+#scroller-in  {
   display: inline-block;
   white-space: nowrap;
   animation-name: scroll;
@@ -140,7 +183,7 @@ video {
   color: #000;
   -webkit-text-stroke: 2px #ffffff;
 }
-#scroller h4:hover {
+#scroller h4:hover{
   color: #95c11e;
   -webkit-text-stroke: 2px #95c11e;
 }
@@ -307,3 +350,107 @@ video {
   bottom: 30%;
   right: 15%;
 }
+
+#page4 {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+
+}
+
+.elem{
+  height: 70%;
+  width: 26%;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+
+}
+
+.elem h2{
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 800;
+  position: absolute;
+  z-index: 10;
+  transition: all ease 0.5s;
+
+}
+
+.elem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all ease 0.5s;
+  scale: 1.1;
+}
+
+
+.elem:hover h2{
+  color: #fff;
+  background-color: transparent;
+} 
+
+.elem:hover img{
+  scale: 1;
+  
+}
+
+#page4 h1{
+  font-size: 90px;
+  position: absolute;
+  font-weight: 900;
+  top: -38%;
+  color: #000;
+  font-family: gilroy;
+  -webkit-text-stroke: 2px #fff;
+}
+
+#footer{
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to left,#119f3a 0%,#ace022 80%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  padding: 0 100px;
+
+
+}
+ #footer>img{
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+ }
+
+ #f1 img{
+  height: 100px;
+ }
+
+ #f1,#f2,#f3,#f4{
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+
+ }
+
+ #f2 h3{
+  font-size: 30px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 8px;
+ }
